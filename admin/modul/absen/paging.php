@@ -19,13 +19,13 @@ $nomor = $halaman_awal+1;
 // cari
 if (isset($_POST['go'])) {
   $cari = $_POST['cari'];
-  $taruna = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE nama LIKE '%".$cari."%'");
+  $pegawai = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE nama LIKE '%".$cari."%'");
 }else{
-  $taruna = mysqli_query($koneksi, "SELECT * FROM tb_absen LIMIT $halaman_awal, $batas");
+  $pegawai = mysqli_query($koneksi, "SELECT * FROM tb_absen LIMIT $halaman_awal, $batas");
 }
 
 
-foreach ($taruna as $pro):
+foreach ($pegawai as $pro):
   ?>
     
 
@@ -67,8 +67,8 @@ foreach ($taruna as $pro):
                              
 
                               
-                              <td><button class="btn btn-danger" data-toggle="modal" data-target="#hapus_taruna<?=$pro['id'];?>">hapus</button>
-                            <div class="modal fade" id="hapus_taruna<?=$pro['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                              <td><button class="btn btn-danger" data-toggle="modal" data-target="#hapus_pegawai<?=$pro['id'];?>">hapus</button>
+                            <div class="modal fade" id="hapus_pegawai<?=$pro['id'];?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
                               <div class="modal-dialog" role="document">
                                 <div class="modal-content">
                                   <div class="modal-header">

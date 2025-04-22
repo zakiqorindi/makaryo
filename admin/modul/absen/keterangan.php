@@ -110,13 +110,13 @@
                                                   <td><?=$key['tanggal'];?></td>
                                                   <td><?=$key['jam']?></td>
                                                   <td>
-                                                    <img src="img/taruna/<?=$key['foto'];?>" data-target="#view_image<?=$key['foto']?>" data-toggle="modal">
+                                                    <img src="img/pegawai/<?=$key['foto'];?>" data-target="#view_image<?=$key['foto']?>" data-toggle="modal">
                                                     
                                                              <div class="modal fade" id="view_image<?=$key['foto']?>" tabindex="-1" role="dialog" aria-labelledby="view_image" aria-hidden="true">
                                 <div class="modal-dialog" role="document">
                                
                            
-                                    <center><img src="img/taruna/<?= $key['foto'];?>" width="1080"></center>
+                                    <center><img src="img/pegawai/<?= $key['foto'];?>" width="1080"></center>
                                    
                                
                                 </div>

@@ -128,10 +128,10 @@ CREATE TABLE `tb_keterangan` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `tb_taruna`
+-- Table structure for table `tb_pegawai`
 --
 
-CREATE TABLE `tb_taruna` (
+CREATE TABLE `tb_pegawai` (
   `id` int(11) NOT NULL,
   `nip` text NOT NULL,
   `username` text NOT NULL,
@@ -145,14 +145,14 @@ CREATE TABLE `tb_taruna` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `tb_taruna`
+-- Dumping data for table `tb_pegawai`
 --
 
-INSERT INTO `tb_taruna` (`id`, `nip`, `username`, `password`, `nama`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `kontak`, `foto`) VALUES
-(27, '2120101701', 'zia', 'af8f0d3f9435119d64658c49e74efffd', 'Fauziah Syifa', 'Semarang', '2001-10-13', 'Banyubiru', 'fauziah.syifa@student.poltekssn.ac.id', '872-Fauziah Syifa.JPG'),
-(28, '2120101719', 'cakwan', 'b94c6fe35741628adb9d6cb8d4a066dc', 'Kurniawan Dwi', 'Nganjuk', '2002-03-17', 'Kertosono', 'kurniawan.dwi@student.poltekssn.ac.id', '757-Kurniawan Dwi.JPG'),
-(29, '2120101685', 'bepe', 'ee67346a378f4ba45ac6f35b6f7ceb38', 'Bayu Purwadi', 'Pekalongan', '2003-08-30', 'Pekalongan', 'bayu.purwadi@student.poltekssn.ac.id', '259-Bayu Purwadi.JPG'),
-(30, '2120101728 ', 'ibad', 'd2ca7711b0c2e063aacc821953fd3d90', 'Muhammad Bintang', 'Jakarta', '2003-09-27', 'Depok', 'muhammad.bintang@student.poltekssn.ac.id', '737-Muhammad Bintang.JPG');
+INSERT INTO `tb_pegawai` (`id`, `nip`, `username`, `password`, `nama`, `tempat_lahir`, `tanggal_lahir`, `alamat`, `kontak`, `foto`) VALUES
+(27, '212021201', 'zia', 'af8f0d3f9435119d64658c49e74efffd', 'Fauziah', 'Semarang', '2003-08-30', 'Depok', 'fauziah@nfa.go.id', ''),
+(28, '212021202', 'wawan', 'b94c6fe35741628adb9d6cb8d4a066dc', 'Kurniawan', 'Nganjuk', '2003-10-30', 'Depok', 'kurniawan@nfa.go.id', ''),
+(29, '212021203', 'bepe', 'ee67346a378f4ba45ac6f35b6f7ceb38', 'Bayu', 'Pekalongan', '2003-07-30', 'Depok', 'bayu@nfa.go.id', ''),
+(30, '2212021204', 'ibad', 'd2ca7711b0c2e063aacc821953fd3d90', 'Bintang', 'Jakarta', '2003-09-30', 'Depok', 'bintang@nfa.go.id', '');
 
 --
 -- Indexes for dumped tables
@@ -189,9 +189,9 @@ ALTER TABLE `tb_keterangan`
   ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `tb_taruna`
+-- Indexes for table `tb_pegawai`
 --
-ALTER TABLE `tb_taruna`
+ALTER TABLE `tb_pegawai`
   ADD PRIMARY KEY (`id`);
 
 --
@@ -229,9 +229,9 @@ ALTER TABLE `tb_keterangan`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `tb_taruna`
+-- AUTO_INCREMENT for table `tb_pegawai`
 --
-ALTER TABLE `tb_taruna`
+ALTER TABLE `tb_pegawai`
   MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=31;
 COMMIT;
 

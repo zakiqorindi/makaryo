@@ -101,8 +101,8 @@
                             
                         </li>
                         <li>
-                            <a href="index.php?m=taruna&s=awal">
-                                <i class="fas fa-users"></i>Data Taruna</a>
+                            <a href="index.php?m=pegawai&s=awal">
+                                <i class="fas fa-users"></i>Data Pegawai</a>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="index.php?m=absen">
@@ -226,8 +226,8 @@
                             
                         </li>
                         <li>
-                            <a href="index.php?m=taruna&s=awal">
-                                <i class="fas fa-users"></i>Data Taruna</a>
+                            <a href="index.php?m=pegawai&s=awal">
+                                <i class="fas fa-users"></i>Data Pegawai</a>
                         </li>
                         <li class="has-sub">
                             <a class="js-arrow" href="index.php?m=absen">

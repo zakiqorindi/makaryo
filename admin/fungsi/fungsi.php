@@ -135,9 +135,9 @@ function edit_admin()
 
 }
 
-// ---------------------------------------------TARUNA SECTION------------------------------------------------------------
+// ---------------------------------------------PEGAWAI SECTION------------------------------------------------------------
 
-function simpan_taruna()
+function simpan_pegawai()
 {
 	global $koneksi;
 	$nip = $_POST['nip'];
@@ -158,46 +158,46 @@ if ($foto!= "") {
 		$angka_acak = rand(1,999);
 		$nama_file_baru = $angka_acak.'-'.$foto;
 		if (in_array($ext, $allowed_ext)===true) {
-			move_uploaded_file($file_tmp, 'img/taruna/'.$nama_file_baru);
-			$res = mysqli_query($koneksi, "INSERT INTO tb_taruna SET nip='$nip', username='$username', password='$password', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', alamat='$alamat', kontak='$kontak', foto='$nama_file_baru'");
+			move_uploaded_file($file_tmp, 'img/pegawai/'.$nama_file_baru);
+			$res = mysqli_query($koneksi, "INSERT INTO tb_pegawai SET nip='$nip', username='$username', password='$password', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', alamat='$alamat', kontak='$kontak', foto='$nama_file_baru'");
 
 		}
 	}else if (empty($_POST['foto'])) {
-		$res = mysqli_query($koneksi, "INSERT INTO tb_taruna SET nip='$nip', username='$username', password='$password', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', alamat='$alamat', kontak='$kontak'");
+		$res = mysqli_query($koneksi, "INSERT INTO tb_pegawai SET nip='$nip', username='$username', password='$password', nama='$nama', tempat_lahir='$tempat_lahir', tanggal_lahir='$tanggal_lahir', alamat='$alamat', kontak='$kontak'");
 	}
 }
 
-function hapus_taruna()
+function hapus_pegawai()
 {
 	error_reporting(0);
 	global $koneksi;
 	$id = $_POST['id'];
 
 	// proses unlink foto
-	$select = mysqli_query($koneksi, "SELECT * FROM tb_taruna WHERE id='$id'");
+	$select = mysqli_query($koneksi, "SELECT * FROM tb_pegawai WHERE id='$id'");
 	$r = mysqli_fetch_array($select);
 	$hapus_foto = $r['foto'];
 
 	if ($r['foto'] != "") {
-		unlink("img/taruna/$hapus_foto");
-		return mysqli_query($koneksi, "DELETE FROM tb_taruna WHERE id='$id'");
+		unlink("img/pegawai/$hapus_foto");
+		return mysqli_query($koneksi, "DELETE FROM tb_pegawai WHERE id='$id'");
 	}else{
-		return mysqli_query($koneksi, "DELETE FROM tb_taruna WHERE id='$id'");
+		return mysqli_query($koneksi, "DELETE FROM tb_pegawai WHERE id='$id'");
 	}
 }
 
-function select_taruna()
+function select_pegawai()
 {
 	global $koneksi;
-	return mysqli_query($koneksi, "SELECT * FROM tb_taruna");
+	return mysqli_query($koneksi, "SELECT * FROM tb_pegawai");
 }
 
-function select_taruna_2()
+function select_pegawai_2()
 {
 	global $koneksi;
-	$select = mysqli_query($koneksi, "SELECT count(id) AS jtaruna FROM tb_taruna");
+	$select = mysqli_query($koneksi, "SELECT count(id) AS jpegawai FROM tb_pegawai");
 	$r = mysqli_fetch_array($select);
-	echo $r['jtaruna'];
+	echo $r['jpegawai'];
 
 }
 // ----------------------------------------SETTING SECTION-------------------------------------------------------------------------------\\

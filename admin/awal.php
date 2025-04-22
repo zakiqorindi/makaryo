@@ -46,8 +46,8 @@
                             </div>
                             <div class="col-md-6 col-lg-3">
                                 <div class="statistic__item">
-                                    <h2 class="number"><?=select_taruna_2();?></h2>
-                                    <span class="desc">Jumlah Taruna</span>
+                                    <h2 class="number"><?=select_pegawai_2();?></h2>
+                                    <span class="desc">Jumlah Pegawai</span>
                                     <div class="icon">
                                         <i class="zmdi zmdi-accounts-alt"></i>
                                     </div>

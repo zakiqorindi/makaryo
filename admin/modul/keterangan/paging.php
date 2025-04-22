@@ -19,13 +19,13 @@ $nomor = $halaman_awal+1;
 // cari
 if (isset($_POST['go'])) {
   $cari = $_POST['cari'];
-  $taruna = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE id LIKE '%".$cari."%'");
+  $pegawai = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE id LIKE '%".$cari."%'");
 }else{
-  $taruna = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE keterangan != 'null' LIMIT $halaman_awal, $batas");
+  $pegawai = mysqli_query($koneksi, "SELECT * FROM tb_absen WHERE keterangan != 'null' LIMIT $halaman_awal, $batas");
 }
 
 
-foreach ($taruna as $pro):
+foreach ($pegawai as $pro):
   ?>
     
 
@@ -50,13 +50,13 @@ foreach ($taruna as $pro):
                               <td><?=$pro['tanggal'];?></td>
                               <td><?=$pro['jam']?></td>
                               <td>
-                                <img src="img/taruna/<?=$pro['foto'];?>" data-target="#view_image<?=$pro['foto']?>" data-toggle="modal">
+                                <img src="img/pegawai/<?=$pro['foto'];?>" data-target="#view_image<?=$pro['foto']?>" data-toggle="modal">
                                 
                                          <div class="modal fade" id="view_image<?=$pro['foto']?>" tabindex="-1" role="dialog" aria-labelledby="view_image" aria-hidden="true">
             <div class="modal-dialog" role="document">
            
        
-                <center><img src="img/taruna/<?= $pro['foto'];?>" width="1080"></center>
+                <center><img src="img/pegawai/<?= $pro['foto'];?>" width="1080"></center>
                
            
             </div>
@@ -104,7 +104,7 @@ foreach ($taruna as $pro):
                                      <label>Jam : </label>
                                      <b><?=$pro['jam'];?></b><br>
                                      <label>Foto : </label>
-                                                                   <img src="img/taruna/<?=$pro['foto'];?>" data-target="#view_image" data-toggle="modal" width="250">
+                                                                   <img src="img/pegawai/<?=$pro['foto'];?>" data-target="#view_image" data-toggle="modal" width="250">
                                        <div class="modal-footer">
                                     <button type="submit" name="hapus" class="btn btn-danger">Hapus</button>
                                     <button type="button" class="btn btn-secondary" data-dismiss="modal">Tutup</button>

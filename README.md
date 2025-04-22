@@ -1,5 +1,5 @@
 # WAAT
-Web App Absensi Taruna (Trace01)
+Web App Absensi Taruna
 
 
 <strong>Fitur</strong>
